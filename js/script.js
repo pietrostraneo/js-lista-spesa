@@ -29,13 +29,34 @@ let i = 0;
 
 // BONUS LATTE
 
+// while(i < list.length){
+//     const li = document.createElement("li");
+//     li.innerText = list[i];
+//     shown_list.appendChild(li); 
+//     console.log(list[i]);
+//     if(list[i] == "Latte"){
+//         li.innerText += (" (non scremato)")
+//     }
+//     i++;
+// }
+
+
+
+// BONUS LATTE 2
+
 while(i < list.length){
     const li = document.createElement("li");
     li.innerText = list[i];
-    shown_list.appendChild(li); 
     console.log(list[i]);
     if(list[i] == "Latte"){
-        li.innerText += (" (non scremato)")
+        const response = confirm("Vuoi indicare nella lista che il tuo latte è scremato?")
+        if(response){
+            li.innerText += (" (scremato)")
+        }
+        else{
+            li.innerText += (" (non scremato)")
+        }
     }
+    shown_list.appendChild(li); 
     i++;
 }
