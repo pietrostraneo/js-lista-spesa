@@ -17,11 +17,25 @@ let i = 0;
 
 // METODO 2
 
+// while(i < list.length){
+//     const li = document.createElement("li");
+//     li.innerText = list[i];
+//     shown_list.appendChild(li); 
+//     console.log(list[i]);
+//     i++;
+// }
+
+
+
+// BONUS LATTE
+
 while(i < list.length){
     const li = document.createElement("li");
     li.innerText = list[i];
     shown_list.appendChild(li); 
     console.log(list[i]);
+    if(list[i] == "Latte"){
+        li.innerText += (" (non scremato)")
+    }
     i++;
 }
-
